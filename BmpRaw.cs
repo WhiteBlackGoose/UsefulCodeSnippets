@@ -30,3 +30,46 @@ public unsafe class BmpRaw<T> : IDisposable where T : unmanaged
 
     public bool InBounds(int x, int y) => x >= 0 && y >= 0 && x < Width && y < Height;
 }
+
+
+/* Formats */
+
+using System.Runtime.InteropServices;
+
+[StructLayout(LayoutKind.Sequential, Size = 1)]
+struct Color8
+{
+    public byte V;
+}
+
+[StructLayout(LayoutKind.Sequential, Size = 2)]
+struct Color16
+{
+    public ushort V;
+}
+
+
+[StructLayout(LayoutKind.Sequential, Size = 3)]
+struct Color24RGB
+{
+    public byte R, G, B;
+}
+
+
+[StructLayout(LayoutKind.Sequential, Size = 4)]
+struct Color32RGBA
+{
+    public byte R, G, B, A;
+}
+
+[StructLayout(LayoutKind.Sequential, Size = 6)]
+struct Color48RGB
+{
+    public ushort R, G, B;
+}
+
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+struct Color64RGB
+{
+    public ushort R, G, B, A;
+}
