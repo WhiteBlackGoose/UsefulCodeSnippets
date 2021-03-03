@@ -1,6 +1,6 @@
 When replaceing `words`, this might be convenient
 
-`(([A-z]|\(|\)|\||[0-9,;]|\s|>|<)*)`
+`(([A-z]|\(|\)|\||[0-9,;+\-*^]|\s|>|<|=|\{|\}|\:|\.|\\|\/|\[|\]|\')*)`
 
 <text class="cw">\1</text>
 
