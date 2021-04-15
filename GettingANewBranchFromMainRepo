@@ -1,4 +1,4 @@
-git checkout upstream main
+git checkout upstream/main
 git branch new-branch
 git pull upstream main
 git checkout new-branch
